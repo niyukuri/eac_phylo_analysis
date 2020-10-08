@@ -32,8 +32,7 @@ All code is written in R. R is a statistical programming language and software p
   
 ### Results files
 
-  ***results*** -- contains RDS files of analysis outputs, subfolder for transmission clusters, figures, and tables. [FigTree](<http://tree.bio.ed.ac.uk/software/figtree/>) was used to visualise the phylogenetic trees.
-  
+  ***results*** -- contains RDS files of analysis outputs, subfolder for transmission clusters, figures, and tables.   
 
 
 
@@ -54,16 +53,6 @@ All code is written in R. R is a statistical programming language and software p
   4. Click on the "Download R for ***your OS***" link at the top of the page.
   
   
- 
- **ClusterPicker version 1.2.3** <http://hiv.bio.ed.ac.uk/software.html> Cluster Picker identifies clusters in newick-formatted phyogenetic trees containing thousands of sequences. Cut-offs for within cluster genetic distance and bootstrap support are selected by the user.
-
-  To use ClusterPicker, do the following:
-  
-  1. Install Java 1.6.0 or higher
-  2. Visit the website for downloading instructions for ClusterPicker: <http://hiv.bio.ed.ac.uk/software.html>
-  3. Donwload the ClusterPicker command line version
-
-
 
   **FastTree version 2.1.10** <http://www.microbesonline.org/fasttree/#Install> Reconstructs a phylogenetic tree from a large alignment dataset. To install FastTree, do the following:
   
@@ -77,6 +66,21 @@ All code is written in R. R is a statistical programming language and software p
   8. Now check to see if a new executable file has been created in that folder
   9. Copy that file and paste it into your R working directory
 
+
+
+ **ClusterPicker version 1.2.3** <http://hiv.bio.ed.ac.uk/software.html> Cluster Picker identifies clusters in newick-formatted phyogenetic trees containing thousands of sequences. Cut-offs for within cluster genetic distance and bootstrap support are selected by the user.
+
+  To use ClusterPicker, do the following:
+  
+  1. Install Java 1.6.0 or higher
+  2. Visit the website for downloading instructions for ClusterPicker: <http://hiv.bio.ed.ac.uk/software.html>
+  3. Donwload the ClusterPicker command line version
+
+
+**FigTree version 1.4.4** <http://tree.bio.ed.ac.uk/software/figtree/> Graphical viewer of phylogenetic trees. 
+
+  1. Visit the website for downloading instructions: <http://tree.bio.ed.ac.uk/software/figtree/>
+  2. Compared binaries (for Mac, Windows and Linux) are available at <https://github.com/rambaut/figtree/releases>
 
 
 **Note:** An executable file for FastTree and ClusterPicker must be in the working directory or in any other directory which will require appropriate resourcing them in the working directory. 
