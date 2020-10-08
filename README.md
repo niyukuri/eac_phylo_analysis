@@ -27,12 +27,12 @@ All code is written in R. R is a statistical programming language and software p
  
  ### Data files
   
-  ***data*** -- contains a file with accession numbers at [LAN]<https://www.hiv.lanl.gov>, and Fasta files of sequence data.
+  ***data*** -- contains a file with accession numbers at [LAN](<https://www.hiv.lanl.gov>), and Fasta files of sequence data.
   
   
 ### Results files
 
-  ***results*** -- contains RDS files of analysis outputs, subfolder for transmission clusters, figures, and tables. [FigTree]<http://tree.bio.ed.ac.uk/software/figtree/> was used to visualise the phylogenetic trees.
+  ***results*** -- contains RDS files of analysis outputs, subfolder for transmission clusters, figures, and tables. [FigTree](<http://tree.bio.ed.ac.uk/software/figtree/>) was used to visualise the phylogenetic trees.
   
 
 
