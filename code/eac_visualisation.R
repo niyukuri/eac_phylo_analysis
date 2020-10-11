@@ -406,9 +406,9 @@ for (i in 1:length(d)) {
 # Boxplot: summary of transmission clusters sizes --------------
 
 par(mfrow=c(3,1))
-boxplot(clust.size_a, main = "Histogram of cluster zise for subtype A")
-boxplot(clust.size_c, main = "Histogram of cluster zise for subtype C")
-boxplot(clust.size_d, main = "Histogram of cluster zise for subtype D")
+boxplot(clust.size_a, main = "Summary of cluster zise for subtype A")
+boxplot(clust.size_c, main = "Summary of cluster zise for subtype C")
+boxplot(clust.size_d, main = "Summary of cluster zise for subtype D")
 
 
 
