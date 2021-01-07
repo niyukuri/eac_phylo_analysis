@@ -1,17 +1,18 @@
 # HIV viral diversity and transmission clusters in East Africa
 
-Code for analysis and visualisation of results for HIV viral diversity and transmsission network across east African country.
+Analysis and visualisation of results for HIV viral diversity and transmsission clusters across east African countries, with a simulation exercise to compare phylogenetic trees and transmission clusters built from protease and polymerase sequence data.
 
 
 
 ## CONTENTS
 
-This repo contains the information necessary to reproduce the simulation study:
+This repo contains the information necessary to reproduce the analysis and the simulation exercise:
 
 * [Code and data files](#code-and-data-files)
-   * Code files for simulation and post-simulation analysis
+   * Code files for the analysis
    * Data files 
    * Results files
+   * Simulation files for the simulation exercise
 * [System and software requirements](#system-and-software-requirements)
 * [Contact information](#contact-information)
 
@@ -32,7 +33,12 @@ All code is written in R. R is a statistical programming language and software p
   
 ### Results files
 
-  ***results*** -- contains RDS files of analysis outputs, subfolder for transmission clusters, figures, and tables.   
+  ***results*** -- contains data objects of analysis outputs (phyloegentic trees), subfolder (***transmission_clusters***) for transmission clusters outputs.   
+
+
+### Simulation files
+
+  ***simpact_simulation*** -- contains R simulation script (***simpact_simulation.R***), root sequences files (hiv.seq.C.pol.j.fasta and hiv.seq.C.protease.j.fasta) to generate the sequences (C.Epidemic.pol.fas and C.Epidemic.protease.fas), and outputs when comparing phylogenetic trees built using Pol and protease sequences and transmission clusters.
 
 
 
@@ -67,6 +73,22 @@ All code is written in R. R is a statistical programming language and software p
   9. Copy that file and paste it into your R working directory
 
 
+
+
+  **Seq-Gen version 1.3.4** <https://github.com/rambaut/Seq-Gen/releases/tag/1.3.4> Simulates viral evolution across a transmission network and produces a sequence alignment. To install Seq-Gen, do the following:
+  
+  1. Visit the following Github repository to download the latest version of Seq-Gen: <https://github.com/rambaut/Seq-Gen/releases/tag/1.3.4>
+  2. Click on the "Source Code" zip file to download
+  3. Click on the zip file to unzip the folder
+  4. Navigate to the source folder to confirm there is a file called "Makefile"
+  5. Now you will need to compile the program using the Terminal on your computer
+  6. Via the Terminal, change your working directory to the source folder by typing after the prompt: `cd "file/path/here/Seq-Gen-1.3.4 2/source"`
+  7. Once your working directory has been set to the source folder, type after the prompt: `make`
+  8. Now open the source folder and verify that a new file is present called "seq-gen"
+  9. Copy that file and paste it into your R working directory
+  
+  If installing on HPC facility, you may follow the instructions from 1 up to 5. And you will load the tool via the the PBS file, for example `module add /apps/chpc/scripts/modules/bio/app/Seq-Gen/1.3.4`.
+  
 
  **ClusterPicker version 1.2.3** <http://hiv.bio.ed.ac.uk/software.html> Cluster Picker identifies clusters in newick-formatted phyogenetic trees containing thousands of sequences. Cut-offs for within cluster genetic distance and bootstrap support are selected by the user.
 
