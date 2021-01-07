@@ -2411,6 +2411,8 @@ C_RW_dater.tree <- get(load("/home/david/Dropbox/eac_phylo_analysis/results/C_RW
 D_RW_dater.tree <- get(load("/home/david/Dropbox/eac_phylo_analysis/results/D_RW_dater.tree.RData"))
 
 
+# Plot regression for all subtypes/countries
+
 par(mfrow=c(6,3))
 
 fit_A_BI <- editedRootToTipRegressionPlot(A_BI_dater.tree)
@@ -2439,37 +2441,6 @@ fit_C_RW <- editedRootToTipRegressionPlot(C_RW_dater.tree)
 fit_D_RW <- editedRootToTipRegressionPlot(D_RW_dater.tree)
 
 
-# abs(round(summary(fit_A_UGA)[4]$coefficients[1][1]/summary(fit_A_UGA)[4]$coefficients[2][1]))
-
-m <- matrix(ncol = 4, nrow = 18 , byrow = TRUE)
-
-m <- matrix(c(c(summary(fit_A_BI)[4]$coefficients[1][1], summary(fit_A_BI)[4]$coefficients[2][1], abs(round(summary(fit_A_BI)[4]$coefficients[1][1]/summary(fit_A_BI)[4]$coefficients[2][1])), summary(fit_A_BI)$coefficients[2,4]),
-            c(summary(fit_C_BI)[4]$coefficients[1][1], summary(fit_C_BI)[4]$coefficients[2][1], abs(round(summary(fit_C_BI)[4]$coefficients[1][1]/summary(fit_C_BI)[4]$coefficients[2][1])), summary(fit_C_BI)$coefficients[2,4]),
-            c(summary(fit_D_BI)[4]$coefficients[1][1], summary(fit_D_BI)[4]$coefficients[2][1], abs(round(summary(fit_D_BI)[4]$coefficients[1][1]/summary(fit_D_BI)[4]$coefficients[2][1])), summary(fit_D_BI)$coefficients[2,4]),
-            
-            c(summary(fit_A_DRC)[4]$coefficients[1][1], summary(fit_A_DRC)[4]$coefficients[2][1], abs(round(summary(fit_A_DRC)[4]$coefficients[1][1]/summary(fit_A_DRC)[4]$coefficients[2][1])), summary(fit_A_DRC)$coefficients[2,4]),
-            c(summary(fit_C_DRC)[4]$coefficients[1][1], summary(fit_C_DRC)[4]$coefficients[2][1], abs(round(summary(fit_C_DRC)[4]$coefficients[1][1]/summary(fit_C_DRC)[4]$coefficients[2][1])), summary(fit_C_DRC)$coefficients[2,4]),
-            c(summary(fit_D_DRC)[4]$coefficients[1][1], summary(fit_D_DRC)[4]$coefficients[2][1], abs(round(summary(fit_D_DRC)[4]$coefficients[1][1]/summary(fit_D_DRC)[4]$coefficients[2][1])), summary(fit_D_DRC)$coefficients[2,4]),
-            
-            c(summary(fit_A_KE)[4]$coefficients[1][1], summary(fit_A_KE)[4]$coefficients[2][1], abs(round(summary(fit_A_KE)[4]$coefficients[1][1]/summary(fit_A_KE)[4]$coefficients[2][1])), summary(fit_A_KE)$coefficients[2,4]),
-            c(summary(fit_C_KE)[4]$coefficients[1][1], summary(fit_C_KE)[4]$coefficients[2][1], abs(round(summary(fit_C_KE)[4]$coefficients[1][1]/summary(fit_C_KE)[4]$coefficients[2][1])), summary(fit_C_KE)$coefficients[2,4]),
-            c(summary(fit_D_KE)[4]$coefficients[1][1], summary(fit_D_KE)[4]$coefficients[2][1], abs(round(summary(fit_D_KE)[4]$coefficients[1][1]/summary(fit_D_KE)[4]$coefficients[2][1])), summary(fit_D_KE)$coefficients[2,4]),
-            
-            c(summary(fit_A_RW)[4]$coefficients[1][1], summary(fit_A_RW)[4]$coefficients[2][1], abs(round(summary(fit_A_RW)[4]$coefficients[1][1]/summary(fit_A_RW)[4]$coefficients[2][1])), summary(fit_A_RW)$coefficients[2,4]),
-            c(summary(fit_C_RW)[4]$coefficients[1][1], summary(fit_C_RW)[4]$coefficients[2][1], abs(round(summary(fit_C_RW)[4]$coefficients[1][1]/summary(fit_C_RW)[4]$coefficients[2][1])), summary(fit_C_RW)$coefficients[2,4]),
-            c(summary(fit_D_RW)[4]$coefficients[1][1], summary(fit_D_RW)[4]$coefficients[2][1], abs(round(summary(fit_D_RW)[4]$coefficients[1][1]/summary(fit_D_RW)[4]$coefficients[2][1])), summary(fit_D_RW)$coefficients[2,4]),
-            
-            
-            c(summary(fit_A_TZ)[4]$coefficients[1][1], summary(fit_A_TZ)[4]$coefficients[2][1], abs(round(summary(fit_A_TZ)[4]$coefficients[1][1]/summary(fit_A_TZ)[4]$coefficients[2][1])), summary(fit_A_TZ)$coefficients[2,4]),
-            c(summary(fit_C_TZ)[4]$coefficients[1][1], summary(fit_C_TZ)[4]$coefficients[2][1], abs(round(summary(fit_C_TZ)[4]$coefficients[1][1]/summary(fit_C_TZ)[4]$coefficients[2][1])), summary(fit_C_TZ)$coefficients[2,4]),
-            c(summary(fit_D_TZ)[4]$coefficients[1][1], summary(fit_D_TZ)[4]$coefficients[2][1], abs(round(summary(fit_D_TZ)[4]$coefficients[1][1]/summary(fit_D_TZ)[4]$coefficients[2][1])), summary(fit_D_TZ)$coefficients[2,4]),
-            
-            c(summary(fit_A_UGA)[4]$coefficients[1][1], summary(fit_A_UGA)[4]$coefficients[2][1], abs(round(summary(fit_A_UGA)[4]$coefficients[1][1]/summary(fit_A_UGA)[4]$coefficients[2][1])), summary(fit_A_UGA)$coefficients[2,4]),
-            c(summary(fit_C_UGA)[4]$coefficients[1][1], summary(fit_C_UGA)[4]$coefficients[2][1], abs(round(summary(fit_C_UGA)[4]$coefficients[1][1]/summary(fit_C_UGA)[4]$coefficients[2][1])), summary(fit_C_UGA)$coefficients[2,4]),
-            c(summary(fit_D_UGA)[4]$coefficients[1][1], summary(fit_D_UGA)[4]$coefficients[2][1], abs(round(summary(fit_D_UGA)[4]$coefficients[1][1]/summary(fit_D_UGA)[4]$coefficients[2][1])), summary(fit_D_UGA)$coefficients[2,4])),
-            
-            ncol = 4, nrow = 18 , byrow = TRUE
-)
 
 # Trend of internal nodes per subtype and country --------------
 
