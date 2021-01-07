@@ -1,12 +1,18 @@
 
+# Simulation to compare trees and transmsission clusters built with
+# sequence data from polymerase and protease
+
+
 # Before running the code below, make sure you have followed the instructions for installing all the required software
 
 
 # Set the working directory
 
+# setwd("/path/to/your/working_directory/") # Change this to your own working directory
+
 setwd("/home/david/Dropbox/eac_phylo_analysis/simpact_simulation")
 
-# setwd("/path/to/your/working_directory/") # Change this to your own working directory
+
 
 # Make sure you put Seq-gen, FastTree, ClusterPicker_1.2.3.jar tools and root sequence in the working directory
 #
@@ -563,13 +569,6 @@ count.start <- 1977
 endsim <- 40
 
 
-dates.Transform.NamedVector  <- function(dates=dates){
-  
-  dates.val <- endsim - dates$V2 + count.start # dates
-  names(dates.val) <- as.character(dates$V1) # names are the names of the tips
-  
-  return(dates.val)
-}
 
 
 
@@ -1020,5 +1019,6 @@ length(intersect_3_3) # = 317
 
 
 
+# END ---------
 
 
