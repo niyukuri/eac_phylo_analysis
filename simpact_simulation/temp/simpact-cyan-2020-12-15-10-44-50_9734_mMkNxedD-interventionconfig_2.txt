@@ -1,2 +1,0 @@
-diagnosis.baseline = -1.8
-monitoring.cd4.threshold = 150

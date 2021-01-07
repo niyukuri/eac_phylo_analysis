@@ -2,11 +2,16 @@
 # Before running the code below, make sure you have followed the instructions for installing all the required software
 
 
-# setwd("/path/to/your/working_directory/") # Change this to your own working directory
-# put Seq-gen, FastTree, ClusterPicker_1.2.3.jar tools and root sequence in the working directory
-#
+# Set the working directory
 
 setwd("/home/david/Dropbox/eac_phylo_analysis/simpact_simulation")
+
+# setwd("/path/to/your/working_directory/") # Change this to your own working directory
+
+# Make sure you put Seq-gen, FastTree, ClusterPicker_1.2.3.jar tools and root sequence in the working directory
+#
+
+
 
 # Make sure compiled tools (Seq-Gen and FastTree) are in same working directory
 
@@ -26,7 +31,7 @@ library(dplyr)
 
 # Sourcing the IDs.Seq.Random.skew function and renaming IDS in transmission table 
 # to match tips names in the tree
-source("utilities_funs.R")
+
 
 
 inputvector <- c(777, -0.52, -0.05, 2, 10, 5, 0.25, -0.3, -0.1,
